@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Tracker</h1>
+        <div class="input-section">
+            <input type="text" id="city-input" placeholder="Enter city name">
+            <button id="search-button">Search</button>
+            <p id="error-message" class="error-message"></p>
+        </div>
+        <div id="loading-spinner" class="spinner" style="display:none;"></div>
+        
+        <div id="weather-data" style="display:none;">
+            <h2 id="city-name">
+                <span id="city-name-text"></span>
+                <button id="favorite-button" title="Add to Favorites">⭐</button>
+            </h2>
+            <div id="tabs">
+                <div id="current-weather"></div>
+                <div id="forecast"></div>
+            </div>
+        </div>
+
+        <h2>Favorite Cities</h2>
+        <ul id="favorite-cities"></ul>
+
+        <button id="customize-button">Customize Styles</button>
+
+        <div id="customize-dialog" class="dialog">
+            <label for="bg-color">Background Color:</label>
+            <input type="color" id="bg-color">
+            <label for="text-color">Text Color:</label>
+            <input type="color" id="text-color">
+            <label for="font-size">Font Size:</label>
+            <input type="number" id="font-size" min="10" max="30">
+            <button id="apply-styles-button">Apply Styles</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
