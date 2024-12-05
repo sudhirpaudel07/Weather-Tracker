@@ -1,0 +1,132 @@
+:root {
+    --bg-color: #cad3e4;
+    --text-color: #333;
+    --font-size: 16px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: var(--font-size);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #cad3e4;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.input-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input-section input {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.input-section button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+}
+
+.spinner {
+    text-align: center;
+}
+
+#weather-data {
+    display: none;
+}
+
+#city-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#current-weather, #forecast {
+    text-align: center;
+}
+
+#tabs {
+    margin-top: 20px;
+}
+
+#tabs .ui-tabs-panel {
+    padding: 20px;
+}
+
+.forecast-container {
+    display: flex;
+    justify-content: space-evenly; 
+    gap: 10px;
+    padding: 10px 0;
+    overflow-x: auto; 
+}
+
+.forecast-day {
+    padding: 10px;
+    background-color: #d6d2d2;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 160px; 
+    text-align: center;
+    opacity: 0; 
+    margin-left: 10px;
+    transition: margin-left 1s ease, opacity 1s ease; 
+    font-size: 14px; 
+}
+
+.forecast-day p {
+    margin: 5px 0;
+}
+
+#favorite-cities {
+    list-style: none;
+    padding: 0;
+}
+
+#favorite-cities li {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remove-favorite {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.dialog {
+    display: none;
+}
